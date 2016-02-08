@@ -1,0 +1,77 @@
+﻿@model WebApplication.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            Strength: <span id="passwordStrength"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Register" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/mvc/5.0/jquery.validate.unobtrusive.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on('keyup', '#Password', function () {
+                var password = $('#Password').val();
+                var strength = '';
+
+                if (password != '') {
+                    var result = zxcvbn(password);
+
+                    switch (result.score) {
+                        case 0:
+                            strength = 'far too weak';
+                            break;
+                        case 1:
+                            strength = 'very weak';
+                            break;
+                        case 2:
+                            strength = 'weak';
+                            break;
+                        case 3:
+                            strength = 'strong';
+                            break;
+                        case 4:
+                            strength = 'very strong';
+                            break;
+                    }
+                }
+
+                $('#passwordStrength').text(strength);
+            });
+        });
+    </script>
+}
