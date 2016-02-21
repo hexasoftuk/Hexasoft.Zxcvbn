@@ -9,6 +9,24 @@ Download
 Hexasoft.Zxcvbn is available as a NuGet package at [https://www.nuget.org/packages/Hexasoft.Zxcvbn](https://www.nuget.org/packages/Hexasoft.Zxcvbn)
 
 
+Usage
+-----
+    using Hexasoft.Zxcvbn;
+    
+    ...
+    
+    var estimator = new ZxcvbnEstimator();
+    var result = estimator.EstimateStrength("hunter2");
+    
+    if (result.Score < 3)
+    {
+        Console.WriteLine("Password is not strong enough");
+        Console.WriteLine(result.Feedback.Warning);
+        Console.WriteLine(string.Join(Environment.NewLine, result.Feedback.Suggestions));
+    }
+
+
+
 Version history
 ---------------
 
