@@ -29,7 +29,11 @@ namespace Hexasoft.Zxcvbn
         {
             // Protection against overloading the CPU with long passwords
             if (password.Length > 128)
+            {
                 throw new ArgumentException("Password can't be longer than 128 characters");
+            }
+
+            password = password.Replace("\\","\\\\").Replace("'", "\\'");
 
             var result = _engine.Execute(string.Format("zxcvbn('{0}')", password)).GetCompletionValue().ToObject();
             var zxcvbnResult = EstimationResult.FromDynamic(result);

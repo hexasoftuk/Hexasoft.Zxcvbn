@@ -30,4 +30,5 @@ Usage
 Version history
 ---------------
 
+- 1.0.2 Fixed bugs with passwords containing `'` and `\` characters. Requires Jint 2.10.3
 - 1.0.0 Initial public release, using zxcvbn 4.2.0

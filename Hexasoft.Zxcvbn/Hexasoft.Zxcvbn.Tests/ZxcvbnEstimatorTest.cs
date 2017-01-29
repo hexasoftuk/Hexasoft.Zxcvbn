@@ -1343,6 +1343,58 @@ namespace Hexasoft.Zxcvbn.Tests
 
         #endregion
 
+        #region Escape sequences
+
+        [TestMethod]
+        public void Password_apostrophes()
+        {
+            // Act
+            var result = _estimator.EstimateStrength("apostrophes'\"");
+
+            // Assert
+            Assert.AreEqual("apostrophes'\"", result.Password);
+            Assert.AreEqual(7.37493, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(2, result.Score);
+            Assert.AreEqual("27 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
+            Assert.AreEqual("3 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("40 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
+            Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
+        }
+
+        [TestMethod]
+        public void Password_specialchars()
+        {
+            // Act
+            var result = _estimator.EstimateStrength("specialchars`¬!\"£$%^&*()-_=+[{]};:'@#~\\|,<.>/?¦€");
+
+            // Assert
+            Assert.AreEqual("specialchars`¬!\"£$%^&*()-_=+[{]};:'@#~\\|,<.>/?¦€", result.Password);
+            Assert.AreEqual(41.31289, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(4, result.Score);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
+        }
+
+        [TestMethod]
+        public void Password_JS_escape()
+        {
+            // Act
+            var result = _estimator.EstimateStrength("\\b \\f \\n \\r \\t \\v \\0 ' \" \\");
+
+            // Assert
+            Assert.AreEqual("\\b \\f \\n \\r \\t \\v \\0 ' \" \\", result.Password);
+            Assert.AreEqual(26, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(4, result.Score);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
+        }
+
+        #endregion
+
         #region Long passwords
 
         [TestMethod]
@@ -1392,5 +1444,6 @@ namespace Hexasoft.Zxcvbn.Tests
         }
 
         #endregion
+
     }
 }
