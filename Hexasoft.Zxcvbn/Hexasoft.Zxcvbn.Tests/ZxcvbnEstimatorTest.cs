@@ -30,7 +30,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(1.76343, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("35 minutes", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("less than a second", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("6 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
         }
@@ -46,7 +46,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(7.95651, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("10 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("3 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Short keyboard patterns are easy to guess", result.Feedback.Warning);
@@ -66,7 +66,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(7.28008, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("21 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("22 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("32 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -102,7 +102,7 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("coRrecth0rseba++ery9.23.2007staple$", result.Password);
-            Assert.AreEqual(20.7201, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(20.71185, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
@@ -167,9 +167,8 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a top-10 common password", result.Feedback.Warning);
-            Assert.AreEqual(2, result.Feedback.Suggestions.Count());
+            Assert.AreEqual(1, result.Feedback.Suggestions.Count());
             Assert.AreEqual("Add another word or two. Uncommon words are better.", result.Feedback.Suggestions.ToList()[0]);
-            Assert.AreEqual("All-uppercase is almost as easy to guess as all-lowercase", result.Feedback.Suggestions.ToList()[1]);
         }
 
         [TestMethod]
@@ -187,9 +186,8 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a top-10 common password", result.Feedback.Warning);
-            Assert.AreEqual(2, result.Feedback.Suggestions.Count());
+            Assert.AreEqual(1, result.Feedback.Suggestions.Count());
             Assert.AreEqual("Add another word or two. Uncommon words are better.", result.Feedback.Suggestions.ToList()[0]);
-            Assert.AreEqual("All-uppercase is almost as easy to guess as all-lowercase", result.Feedback.Suggestions.ToList()[1]);
         }
 
         [TestMethod]
@@ -203,13 +201,12 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(1.80618, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("38 minutes", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("less than a second", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("6 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a top-100 common password", result.Feedback.Warning);
-            Assert.AreEqual(2, result.Feedback.Suggestions.Count());
+            Assert.AreEqual(1, result.Feedback.Suggestions.Count());
             Assert.AreEqual("Add another word or two. Uncommon words are better.", result.Feedback.Suggestions.ToList()[0]);
-            Assert.AreEqual("All-uppercase is almost as easy to guess as all-lowercase", result.Feedback.Suggestions.ToList()[1]);
         }
 
         [TestMethod]
@@ -223,7 +220,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(3.58984, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("2 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("39 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("6 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Straight rows of keys are easy to guess", result.Feedback.Warning);
@@ -243,7 +240,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.22011, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("7 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("28 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is similar to a commonly used password", result.Feedback.Warning);
@@ -262,7 +259,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.35801, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("10 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("4 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("38 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Common names and surnames are easy to guess", result.Feedback.Warning);
@@ -282,7 +279,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.11096, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("5 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("22 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("1 second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -301,7 +298,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(1.68124, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("29 minutes", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("less than a second", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("5 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a top-100 common password", result.Feedback.Warning);
@@ -320,7 +317,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.06232, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("5 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("19 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("1 second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -339,7 +336,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.94596, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("9 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("9 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("1 minute", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Names and surnames by themselves are easy to guess", result.Feedback.Warning);
@@ -358,7 +355,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(5.31492, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("3 months", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("34 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("6 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("21 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Common names and surnames are easy to guess", result.Feedback.Warning);
@@ -374,11 +371,11 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("zhang198822", result.Password);
-            Assert.AreEqual(7.67744, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(7.87327, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
-            Assert.AreEqual("53 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("6 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
-            Assert.AreEqual("1 hour", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
+            Assert.AreEqual("84 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
+            Assert.AreEqual("3 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("2 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Dates are often easy to guess", result.Feedback.Warning);
             Assert.AreEqual(2, result.Feedback.Suggestions.Count());
@@ -397,7 +394,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(6, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("1 year", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("1 day", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -416,7 +413,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -435,7 +432,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -454,7 +451,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -473,7 +470,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -492,7 +489,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -511,7 +508,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -566,7 +563,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(11, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("31 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("4 months", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("10 seconds", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -653,7 +650,7 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("WhyfaultthebardifhesingstheArgives’harshfate?", result.Password);
-            Assert.AreEqual(43.01465, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(40.75446, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
@@ -725,7 +722,7 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("seethenthatyewalkcircumspectly", result.Password);
-            Assert.AreEqual(28.47712, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(25.57054, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
@@ -743,7 +740,7 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("LihiandthepeopleofMorianton", result.Password);
-            Assert.AreEqual(22.10524, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(20.97251, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
@@ -761,7 +758,7 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("establishedinthecityofZarahemla", result.Password);
-            Assert.AreEqual(21.1253, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(20.61436, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
@@ -782,7 +779,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(7.01611, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("12 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("1 day", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("17 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Straight rows of keys are easy to guess", result.Feedback.Warning);
@@ -802,7 +799,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(5.64542, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("6 months", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("1 hour", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("12 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("44 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Repeats like \"aaa\" are easy to guess", result.Feedback.Warning);
@@ -822,7 +819,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.17609, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("6 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("25 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Sequences like abc or 6543 are easy to guess", result.Feedback.Warning);
@@ -839,11 +836,11 @@ namespace Hexasoft.Zxcvbn.Tests
 
             // Assert
             Assert.AreEqual("neverforget13/3/1997", result.Password);
-            Assert.AreEqual(9.5426, Math.Round(result.GuessesLog10, 5));
+            Assert.AreEqual(9.59363, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("1 year", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
-            Assert.AreEqual("4 days", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
+            Assert.AreEqual("12 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("5 days", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
             Assert.AreEqual(0, result.Feedback.Suggestions.Count());
@@ -860,7 +857,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(3.00043, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("10 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("10 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("2 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -879,7 +876,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(5.58827, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("5 months", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("1 hour", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("11 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("39 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is similar to a commonly used password", result.Feedback.Warning);
@@ -898,7 +895,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.17609, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("6 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("25 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Common names and surnames are easy to guess", result.Feedback.Warning);
@@ -917,7 +914,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(10.17898, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("5 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("47 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("17 days", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -935,7 +932,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.27875, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("2 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("19 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -954,7 +951,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.38739, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("2 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("24 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -973,7 +970,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.32015, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("2 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("21 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -992,7 +989,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(5.46189, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("48 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("8 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("29 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1012,7 +1009,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(9, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("3 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("1 day", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1030,7 +1027,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8.00325, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("12 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1048,7 +1045,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8.39794, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("29 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("9 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("7 hours", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1066,7 +1063,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(8.96529, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("3 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("1 day", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1084,7 +1081,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(9.10726, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("5 months", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("4 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("1 day", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1106,9 +1103,8 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a top-10 common password", result.Feedback.Warning);
-            Assert.AreEqual(2, result.Feedback.Suggestions.Count());
+            Assert.AreEqual(1, result.Feedback.Suggestions.Count());
             Assert.AreEqual("Add another word or two. Uncommon words are better.", result.Feedback.Suggestions.ToList()[0]);
-            Assert.AreEqual("All-uppercase is almost as easy to guess as all-lowercase", result.Feedback.Suggestions.ToList()[1]);
         }
 
         [TestMethod]
@@ -1122,7 +1118,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.40824, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("11 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("4 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("43 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("3 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Sequences like abc or 6543 are easy to guess", result.Feedback.Warning);
@@ -1142,7 +1138,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.43457, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("3 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("27 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -1161,7 +1157,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.7348, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("5 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("5 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("54 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -1181,7 +1177,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.7348, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("5 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("5 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("54 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -1201,7 +1197,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(2.7348, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(0, result.Score);
             Assert.AreEqual("5 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("5 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("54 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is a very common password", result.Feedback.Warning);
@@ -1220,7 +1216,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(4.80754, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("27 days", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("11 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("2 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("6 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is similar to a commonly used password", result.Feedback.Warning);
@@ -1240,7 +1236,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(5.07335, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("2 months", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("20 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("3 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("12 seconds", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("This is similar to a commonly used password", result.Feedback.Warning);
@@ -1260,7 +1256,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(6.11754, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("1 year", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("4 hours", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("2 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("2 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1280,7 +1276,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(10.38918, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(4, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("8 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("76 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("28 days", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1298,7 +1294,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(10, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(3, result.Score);
             Assert.AreEqual("centuries", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("31 years", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("12 days", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("1 second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
@@ -1356,7 +1352,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(7.37493, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(2, result.Score);
             Assert.AreEqual("27 years", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("3 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("27 days", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("40 minutes", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
         }
@@ -1408,7 +1404,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual(3.18667, Math.Round(result.GuessesLog10, 5));
             Assert.AreEqual(1, result.Score);
             Assert.AreEqual("15 hours", result.CrackTimesDisplay.OnlineThrottling100PerHour);
-            Assert.AreEqual("15 seconds", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
+            Assert.AreEqual("3 minutes", result.CrackTimesDisplay.OnlineNoThrottling10PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineSlowHashing1e4PerSecond);
             Assert.AreEqual("less than a second", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("Repeats like \"aaa\" are easy to guess", result.Feedback.Warning);
