@@ -1,7 +1,7 @@
 Hexasoft.Zxcvbn
 ===============
 
-.NET port of Dropbox's [zxcvbn](https://github.com/dropbox/zxcvbn) JavaScript library, utilising [Jint](https://github.com/sebastienros/jint) engine. Inspired by [zxcvbn.net](https://github.com/darcythomas/zxcvbn.net).
+.NET Standard port of Dropbox's [zxcvbn](https://github.com/dropbox/zxcvbn) JavaScript library, utilising [Jint](https://github.com/sebastienros/jint) engine. Inspired by [zxcvbn.net](https://github.com/darcythomas/zxcvbn.net).
 
 
 Download
@@ -29,7 +29,7 @@ Usage
 
 Version history
 ---------------
-
+- 2.0.0 Update library to .NET Standard 2.0.  Upgrade unit test library to .NET Core 3.1
 - 1.1.0 Updated zxcvbn to 4.4.2, updated tests to match
 - 1.0.2 Fixed bugs with passwords containing `'` and `\` characters. Requires Jint 2.10.3
 - 1.0.0 Initial public release, using zxcvbn 4.2.0
