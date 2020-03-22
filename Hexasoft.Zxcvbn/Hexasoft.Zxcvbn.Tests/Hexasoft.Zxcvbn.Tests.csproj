@@ -2,7 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
+    <Copyright>Copyright © 2016-2020</Copyright>
+    <Version>2.0.0</Version>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
