@@ -919,7 +919,7 @@ namespace Hexasoft.Zxcvbn.Tests
             Assert.AreEqual("2 seconds", result.CrackTimesDisplay.OfflineFastHashing1e10PerSecond);
             Assert.AreEqual("", result.Feedback.Warning);
             Assert.AreEqual(0, result.Feedback.Suggestions.Count());
-         }
+        }
 
         [TestMethod]
         public void Password_password1()
